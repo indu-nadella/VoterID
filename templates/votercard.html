@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Voter ID Card</title>
+    <link rel="stylesheet" href="/static/voter.css">
+</head>
+<body>
+    <div class="card-container">
+
+        <div class="header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4cb_72Yn7jrFOJlBgwzivRJOWElGjhtHyTg&s" alt="" class="emblem">
+            <div class="text">
+            <h2 class="title">ELECTION COMMISSION OF INDIA</h2>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOiLgQ-cyDQRspolkYPEzoDHKRg-om-i47qQ&s" alt="" class="emblem">
+        </div>
+
+    <div class="details-section">
+
+        <div class="photo-box">
+          <img src="{{data.photo.url}}" alt="" height="150px" width="150px" class="photo">
+        </div>
+
+        <div class="info">
+            <p><strong>Name: </strong>{{data.name}}</p>
+            <p><strong>Father Name: </strong>{{data.father_name}}</p>
+            <p><strong>Date of Birth: </strong>{{data.dob}}</p>
+            <p><strong>Address: </strong>{{data.address}}</p>
+            <p><strong>Voter ID Number: </strong>{{data.voter_id_number}}</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p><strong>e-Electors Photo Identity Card</strong></p>
+    </div>
+
+    </div>
+
+</body>
+</html>
