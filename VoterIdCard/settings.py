@@ -76,12 +76,24 @@ WSGI_APPLICATION = 'VoterIdCard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+if os.environ.get("RENDER"):
+    DATABASES={
+        'default':{
+            'ENGINE':'django.db.backend.mysql',
+            'NAME':os.environ.get('MYSQLDATABASE'),
+            'USER':os.environ.get('MYSQLUSER'),
+            'PASSWORD':os.environ.get('MYSQLPASSWORD'),
+            'HOST':os.environ.get('MYSQLHOST'),
+            'PORT':os.environ.get('MYSQLPORT','3306'),
+        }
     }
-}
 
 
 # Password validation
