@@ -86,8 +86,10 @@ if os.environ.get("RENDER"):
             'PASSWORD':os.environ.get('MYSQLPASSWORD'),
             'HOST':os.environ.get('MYSQLHOST'),
             'PORT':os.environ.get('MYSQLPORT','3306'),
-            'OPTIONS':{
-                'ssl':{'require':True}
+            'OPTIONS': {
+                'ssl': {
+                    'ca': str(BASE_DIR / "certs/ca.pem")
+                }
             }
         }
     }
