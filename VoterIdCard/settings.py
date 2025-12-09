@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'VoterIdCard.wsgi.application'
 if os.environ.get("RENDER"):
     DATABASES={
         'default':{
-            'ENGINE':'django.db.backend.mysql',
+            'ENGINE':'django.db.backends.mysql',
             'NAME':os.environ.get('MYSQLDATABASE'),
             'USER':os.environ.get('MYSQLUSER'),
             'PASSWORD':os.environ.get('MYSQLPASSWORD'),
