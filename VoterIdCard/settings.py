@@ -87,7 +87,7 @@ if os.environ.get("RENDER"):
             'HOST':os.environ.get('MYSQLHOST'),
             'PORT':os.environ.get('MYSQLPORT','3306'),
             'OPTIONS':{
-                'ssl':{'ca':''}
+                'ssl':{'require':True}
             }
         }
     }
