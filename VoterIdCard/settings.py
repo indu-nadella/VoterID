@@ -88,7 +88,7 @@ if os.environ.get("RENDER"):
             'PORT':os.environ.get('MYSQLPORT','3306'),
             'OPTIONS': {
                 'ssl': {
-                    'ca': str(BASE_DIR / "certs/ca.pem")
+                    'ca': str(BASE_DIR / "VoterIdCard"/"certs"/"ca.pem")
                 }
             }
         }
